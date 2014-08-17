@@ -18,7 +18,12 @@ def drop(iterable, n):
   # ・iterable 引数を何らかの形で利用すること。
   # ・yield 式を必ず利用すること。
   # ・import 文を使用しないこと。
-  pass
+  for i in range(n):
+    next(iterable)
+
+  for i in iterable:
+    yield i
+
   # 桜先生からのワンポイントアドバイス：
   # ・fib() 関数の実装を参考にすれば、そんなに難しくはないはずよ♪
   # ・実装方法はいくつかあるけれど、テストが失敗しなければどれでも正解よ♪
